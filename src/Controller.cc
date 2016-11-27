@@ -611,7 +611,7 @@ public:
                 break;
             case of13::OFPT_FLOW_REMOVED:
                 ctx->processFlowRemoved(msg.flowRemoved);
-                emit app.flowRemoved(ctx->connection, msg.flowRemoved);
+                emit app.flowRemoved(ctx->connection, msg.flowRemoved.cookie());
                 break;
             default: {
                 uint32_t xid = msg.base()->xid();

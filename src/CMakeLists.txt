@@ -3,7 +3,7 @@ add_subdirectory(maple)
 
 set(SOURCES
     # Core
-    Application.cc 
+    Application.cc
     Loader.cc
     Decision.cc
     Flow.cc
@@ -38,6 +38,7 @@ set(SOURCES
     FlowManager.cc
     # Json
     json11.cpp
+    Homework.cc
 )
 
 add_definitions(
@@ -51,7 +52,7 @@ include_directories(
     ${CMAKE_SOURCE_DIR}/third_party/webserver
 )
 
-add_executable(runos ${SOURCES}) 
+add_executable(runos ${SOURCES})
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_BINARY_DIR})
 
 target_link_libraries(runos
@@ -67,6 +68,5 @@ target_link_libraries(runos
     ${Boost_SYSTEM_LIBRARY}
     ${Boost_THREAD_LIBRARY}
     ${Boost_LIBRARIES}
-    pthread 
-
+    pthread
 )

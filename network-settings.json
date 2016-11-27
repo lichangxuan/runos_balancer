@@ -11,8 +11,7 @@
         "stp",
         "arp-handler",
         "flow-manager",
-        "rest-multipart",
-        "rest-flowmod"
+        "homework"
     ],
 
     "flow-manager" : {
@@ -25,12 +24,12 @@
     },
 
     "controller": {
-         "nthreads": 4,
+         "nthreads": 1,
          "cbench": false,
          "pipeline": [
              "link-discovery",
              "host-manager",
-             "arp-handler",
+             "homework",
              "forwarding"
          ]
     },
